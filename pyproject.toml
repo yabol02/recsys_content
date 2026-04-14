@@ -13,9 +13,11 @@ dependencies = [
     "numpy>=2.4.4",
     "pandas>=3.0.2",
     "polars>=1.39.3",
-<<<<<<< HEAD
     "scikit-learn>=1.8.0",
-=======
     "pyarrow>=23.0.1",
->>>>>>> 2ab9f0ee90be61aafebe70a2b7f74fafaaa9df52
+    "optuna>=4.8.0",
+    "implicit>=0.7.2",
+    "sentence-transformers>=5.4.0",
+    "pytorch-tabnet>=4.1.0",
+    "coral-pytorch>=1.4.0",
 ]
