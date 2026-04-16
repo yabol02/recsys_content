@@ -20,4 +20,5 @@ dependencies = [
     "sentence-transformers>=5.4.0",
     "pytorch-tabnet>=4.1.0",
     "coral-pytorch>=1.4.0",
+    "umap-learn>=0.5.12",
 ]
