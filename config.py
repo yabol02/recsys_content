@@ -27,6 +27,7 @@ REVIEW_BASE_COLS = [
     "avg_stars_user",
     "fans",
     "avg_stars_biz",
+    "year_diff",
 ]
 REVIEW_CYCLIC_COLS = {
     "month": 12,
@@ -40,5 +41,5 @@ BIZ_EMB_DIM = 384
 USER_META_DIM = len(USER_META_COLS)  # 16
 REVIEW_FEAT_DIM = (
     len(REVIEW_BASE_COLS) + 2 * len(REVIEW_CYCLIC_COLS) + len(REVIEW_BOOL_COLS)
-)  # 7 + 6 + 2 = 15
+)  # 8 + 6 + 2 = 16
 N_CLASSES = 5

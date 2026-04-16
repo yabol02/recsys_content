@@ -65,16 +65,16 @@ def train(train_df, test_df, user_df, biz_df, cfg: dict):
     #     batch["biz_emb"].max().item(),
     # )
 
-    model.eval()
-    with torch.no_grad():
-        logits = model(
-            batch["user_meta"],
-            batch["user_emb"],
-            batch["biz_emb"],
-            batch["review_feats"],
-        )
-        print("logits NaN:", logits.isnan().any().item())
-        print("logits range:", logits.min().item(), logits.max().item())
+    # model.eval()
+    # with torch.no_grad():
+    #     logits = model(
+    #         batch["user_meta"],
+    #         batch["user_emb"],
+    #         batch["biz_emb"],
+    #         batch["review_feats"],
+    #     )
+    #     print("logits NaN:", logits.isnan().any().item())
+    #     print("logits range:", logits.min().item(), logits.max().item())
 
     for epoch in range(cfg.get("epochs", 30)):
         model.train()
@@ -138,7 +138,7 @@ if __name__ == "__main__":
         "batch_size": 4096,
         "lr": 1e-3,
         "wd": 1e-4,
-        "epochs": 30,
+        "epochs": 50,
     }
 
     model, data = train(train_df, test_df, user_df, biz_df, cfg)
